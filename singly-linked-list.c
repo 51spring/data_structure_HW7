@@ -13,7 +13,7 @@ typedef struct Head
 } headNode; // headNode 구조체 정의. 첫번째 노드를 가리키는 노드 구조체 포인터 first를 가짐
 
 
-/* 함수 리스트 */
+
 headNode* initialize(headNode* h); // headNode 초기화 함수
 int freeList(headNode* h); // 리스트 메모리 해제 함수
 
@@ -228,7 +228,7 @@ int deleteLast(headNode* h) // 리스트 마지막 노드 삭제 함수
 		node = node->link; // node를 다음 노드로 이동
 	}
 
-	if(prev == NULL) // prev가 NULL이면
+	if(prev == NULL) // prev가 NULL인 경우는 headnode의 첫번째 노드가 마지막 노드인 경우
 		h->first = NULL; // headnode의 첫번째 노드를 NULL로 초기화
 	else 
 		prev->link = NULL; // 그 외의 경우 prev의 link를 NULL로 초기화
